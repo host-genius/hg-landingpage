@@ -1,58 +1,58 @@
 "use client";
 
 import { FadeIn } from "./ui/fade-in";
-import Image from "next/image";
+import { ArrowRight } from "lucide-react";
 
 export function SectionTeam() {
     return (
-        <section className="py-24 px-4 relative">
-            {/* Top Glow */}
-            <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent shadow-[0_0_10px_1px_rgba(255,255,255,0.05)] pointer-events-none z-10" />
-
-            <div className="max-w-6xl mx-auto text-center">
+        <section className="py-32 px-4 relative overflow-hidden bg-[#0a0a0a]">
+            <div className="max-w-[1400px] mx-auto relative z-10">
                 <FadeIn>
-                    <h2 className="text-3xl md:text-5xl font-bold mb-8">Who We Are</h2>
+                    <div className="flex flex-col md:flex-row gap-16 md:gap-32 items-center">
+                        {/* Left: Typography & Content */}
+                        <div className="md:w-1/2 relative z-10">
+                            <span className="text-accent font-mono text-sm tracking-widest uppercase mb-8 block">The Community</span>
+                            <h2 className="text-5xl md:text-8xl font-bold text-white mb-10 leading-[0.85] tracking-tighter">
+                                Who We <br />
+                                <span className="text-white/30 italic font-serif">Are.</span>
+                            </h2>
+                            <p className="text-xl text-muted-foreground leading-relaxed font-light mb-12 max-w-lg">
+                                We're a group of vacation rental managers that are looking to build and scale our companies to provide long-term wealth. And we couldn't do it without the collective intelligence we have by coming together.
+                            </p>
 
-                    <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto font-light mb-16">
-                        We're a group of vacation rental managers that are looking to build and scale our companies to provide long-term wealth. And we couldn't do it without the collective intelligence we have by coming together.
-                    </p>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
-                        {/* Image 1: Outdoor Team */}
-                        <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl border border-white/10 bg-white/5 group rotate-[-3deg] hover:rotate-0 transition-all duration-500 hover:z-10 hover:scale-105">
-                            <img
-                                src="/team.jpg"
-                                alt="The HostGenius Team Outdoors"
-                                className="object-cover w-full h-full opacity-90 group-hover:opacity-100 transition-opacity duration-700"
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent pointer-events-none" />
                         </div>
 
-                        {/* Image 2: Meeting Room */}
-                        <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl border border-white/10 bg-white/5 group rotate-[2deg] hover:rotate-0 transition-all duration-500 hover:z-10 hover:scale-105 translate-y-4 md:translate-y-8">
-                            <img
-                                src="/team-meeting.jpg"
-                                alt="The HostGenius Team Meeting"
-                                className="object-cover w-full h-full opacity-90 group-hover:opacity-100 transition-opacity duration-700"
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent pointer-events-none" />
-                        </div>
+                        {/* Right: Abstract Magazine Graphic */}
+                        <div className="md:w-1/2 relative">
+                            <div className="absolute inset-0 bg-gradient-to-tr from-accent/20 to-transparent blur-[100px] rounded-full" />
 
-                        {/* Image 3: Social / Fun */}
-                        <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl border border-white/10 bg-white/5 group rotate-[-2deg] hover:rotate-0 transition-all duration-500 hover:z-10 hover:scale-105">
-                            <img
-                                src="/social.jpg"
-                                alt="The HostGenius Team Social"
-                                className="object-cover w-full h-full opacity-90 group-hover:opacity-100 transition-opacity duration-700"
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent pointer-events-none" />
+                            <div className="relative grid grid-cols-2 gap-4">
+                                <div className="space-y-4 pt-12">
+                                    <div className="aspect-[3/4] bg-white/5 rounded-2xl border border-white/10 overflow-hidden relative group">
+                                        <img src="/team.jpg" alt="Team Offsite" className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700" />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+                                        <span className="absolute bottom-4 left-4 text-white font-mono text-xs z-10">OFFSITE 2024</span>
+                                    </div>
+                                    <div className="aspect-square bg-white/5 rounded-2xl border border-white/10 overflow-hidden relative group">
+                                        <img src="/social.jpg" alt="Community Social" className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-all duration-700" />
+                                    </div>
+                                </div>
+                                <div className="space-y-4">
+                                    <div className="aspect-square bg-white/5 rounded-2xl border border-white/10 overflow-hidden relative group">
+                                        <img src="/team-meeting.jpg" alt="Strategy Session" className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-all duration-700" />
+                                    </div>
+                                    <div className="aspect-[3/4] bg-white/5 rounded-2xl border border-white/10 overflow-hidden relative group">
+                                        <img src="/team.jpg" alt="Mastermind Event" className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700" />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+                                        <span className="absolute bottom-4 left-4 text-white font-mono text-xs z-10">MASTERMIND</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </FadeIn>
             </div>
-
-            {/* Bottom Glow */}
-            <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent shadow-[0_0_10px_1px_rgba(255,255,255,0.05)] pointer-events-none z-10" />
         </section>
     );
 }

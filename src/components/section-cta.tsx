@@ -25,7 +25,9 @@ export function SectionCTA() {
                             If you don't think this will change your life, we don't want to talk again.
                         </p>
                         <p className="text-lg text-muted-foreground/80 mb-12 max-w-3xl mx-auto font-light">
-                            HG is not a community to come talk about what you had for dinner last night - step into the room with the colleagues you wish you had, all funded by the big-tech companies because they see how much faster we grow when we team up.
+                            HG is not a community to come talk about what you had for dinner last night - step into the room with the colleagues you wish you had, and leverage the power of collective intelligence.
+                            <br />
+                            Shared knowledge equates to shared wins.
                         </p>
                         <button
                             onClick={() => setIsModalOpen(true)}

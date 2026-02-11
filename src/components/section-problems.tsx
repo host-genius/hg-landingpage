@@ -3,67 +3,76 @@
 import { FadeIn } from "./ui/fade-in";
 import { TrendingDown, Anchor, Shuffle, Target } from "lucide-react";
 
-const problems = [
-    {
-        icon: <TrendingDown className="w-8 h-8 text-accent" />,
-        title: "Slow, inconsistent owner growth",
-        description: "Growth based on luck is hard to predict, hard to sell, and impossible to step away from."
-    },
-    {
-        icon: <Anchor className="w-8 h-8 text-accent" />,
-        title: "Stuck in the business",
-        description: "Transitioning from Property Manager to CEO is painful. You can't ask your parents or friends how to scale a tech-enabled STR company."
-    },
-    {
-        icon: <Shuffle className="w-8 h-8 text-accent" />,
-        title: "So many roles, so little time",
-        description: "You're wearing too many hats. Operations, Revenue Management, Marketing, HR, Accounting..."
-    },
-    {
-        icon: <Target className="w-8 h-8 text-accent" />,
-        title: "Need to be the small fish",
-        description: "To grow, you need to hire people smarter than you and be in a room where you're surrounded by larger, successful operators."
-    }
-];
-
 export function SectionProblems() {
+    const problems = [
+        {
+            id: "01",
+            title: "Slow, inconsistent owner growth",
+            description: "Growth based on luck is hard to predict, hard to sell, and impossible to step away from."
+        },
+        {
+            id: "02",
+            title: "Stuck in the business",
+            description: "Transitioning from Property Manager to CEO is painful. You can't ask your parents or friends how to scale a tech-enabled STR company."
+        },
+        {
+            id: "03",
+            title: "So many roles, so little time",
+            description: "You're wearing too many hats. Operations, Revenue Management, Marketing, HR, Accounting..."
+        },
+        {
+            id: "04",
+            title: "Need to be the small fish",
+            description: "To grow, you need to hire people smarter than you and be in a room where you're surrounded by larger, successful operators."
+        }
+    ];
+
     return (
-        <section className="py-24 px-4 relative overflow-hidden">
-            {/* Background with subtle red gradient for "The Struggle" */}
-            <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-accent/5 to-black/40 pointer-events-none" />
-
-            {/* Top Glow */}
-            <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent shadow-[0_0_10px_1px_rgba(255,255,255,0.05)] pointer-events-none z-10" />
-
-            <div className="max-w-7xl mx-auto relative z-10">
-                <FadeIn>
-                    <div className="text-center mb-16">
-                        <h2 className="text-3xl md:text-5xl font-bold mb-6">The struggle is real.</h2>
-                        <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                            Most VRMs hit a ceiling because the playbook that got them to 50 units won't get them to 500.
-                        </p>
-                    </div>
-                </FadeIn>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    {problems.map((problem, idx) => (
-                        <FadeIn key={idx} delay={idx * 0.1}>
-                            <div className="group p-8 rounded-3xl bg-white/5 border border-white/5 hover:border-white/10 hover:bg-white/10 transition-all duration-300 h-full">
-                                <div className="mb-6 p-4 rounded-2xl bg-black/50 w-fit border border-white/5 group-hover:scale-110 transition-transform duration-300">
-                                    {problem.icon}
-                                </div>
-                                <h3 className="text-2xl font-bold mb-4">{problem.title}</h3>
-                                <p className="text-lg text-muted-foreground leading-relaxed">
-                                    {problem.description}
-                                </p>
-                            </div>
+        <section className="py-32 px-4 relative overflow-hidden bg-[#050505]">
+            <div className="max-w-[1200px] mx-auto relative z-10">
+                <div className="flex flex-col lg:flex-row gap-16 lg:gap-32">
+                    {/* Sticky Header */}
+                    <div className="lg:w-1/2 lg:sticky lg:top-32 h-fit mb-12 lg:mb-0">
+                        <FadeIn once={false}>
+                            <span className="text-red-500 font-mono text-sm tracking-widest uppercase mb-8 block">The Reality</span>
+                            <h2 className="text-6xl md:text-[8rem] lg:text-[10rem] font-bold text-white mb-12 leading-[0.8] tracking-tighter">
+                                The <br />
+                                Struggle <br />
+                                Is <br />
+                                <span className="text-white/30">Real.</span>
+                            </h2>
+                            <p className="text-xl md:text-2xl text-muted-foreground font-light max-w-md">
+                                Most VRMs hit a ceiling because the playbook that got them to 50 units won't get them to 500.
+                            </p>
                         </FadeIn>
-                    ))}
+                    </div>
+
+                    {/* Editorial List (Redesigned) */}
+                    <div className="lg:w-1/2 lg:mt-[20vh]">
+                        <div className="flex flex-col group/list">
+                            {problems.map((problem, i) => (
+                                <FadeIn key={i} delay={0.5 + (i * 0.1)} once={false}>
+                                    <div className="group/item relative py-8 border-t border-white/20 transition-all duration-500 hover:bg-white/[0.02] -mx-4 px-4 lg:px-0 lg:mx-0">
+                                        <div className="flex flex-col md:flex-row gap-6 md:items-baseline">
+                                            <span className="font-mono text-red-500/80 text-sm tracking-widest w-12 shrink-0">
+                                                {problem.id}
+                                            </span>
+                                            <div className="space-y-4">
+                                                <h3 className="text-2xl md:text-4xl font-bold text-white leading-tight tracking-tight group-hover/item:text-red-500 transition-colors duration-300">
+                                                    {problem.title}
+                                                </h3>
+                                                <p className="text-lg text-muted-foreground font-light leading-relaxed max-w-md group-hover/item:text-white transition-colors duration-300">
+                                                    {problem.description}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </FadeIn>
+                            ))}
+                        </div>
+                    </div>
                 </div>
             </div>
-
-            {/* Bottom Separator & Glow */}
-            <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent shadow-[0_0_10px_1px_rgba(255,255,255,0.05)] pointer-events-none z-10" />
         </section>
     );
 }
