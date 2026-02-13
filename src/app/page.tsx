@@ -7,6 +7,8 @@ import { SectionHowItWorks } from "@/components/section-how-it-works";
 import { SectionTeam } from "@/components/section-team";
 import { SectionMovement } from "@/components/section-movement";
 import { SectionCTA } from "@/components/section-cta";
+import { SectionWhoItsFor } from "@/components/section-who-its-for";
+import { SectionEconomics } from "@/components/section-economics";
 
 export default function Page() {
   return (
@@ -35,6 +37,8 @@ export default function Page() {
       <SectionTeam />
       <SectionMovement />
 
+      <SectionEconomics />
+      <SectionWhoItsFor />
       <SectionCTA />
 
       <footer className="py-12 border-t border-white/5 bg-black/40 text-center relative z-10">

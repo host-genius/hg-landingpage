@@ -12,11 +12,12 @@ export function SectionWhatAreWe() {
                         <FadeIn once={false}>
                             <span className="block text-accent text-sm tracking-[0.2em] uppercase mb-8 font-medium">The Mission</span>
                             <h2 className="text-6xl md:text-8xl font-bold mb-10 text-white leading-[0.85] tracking-tighter">
-                                Not a <br /> mastermind. <br />
-                                <span className="text-white/40">Not a course.</span>
+                                Not a <br /> Mastermind. <br />
+                                <span className="text-white/40">Not a Course.</span> <br />
+                                Not a Group Chat.
                             </h2>
                             <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed font-light max-w-lg">
-                                HostGenius is a private network of professional vacation rental operators. We share data, resources, and buy together to lower costs.
+                                A network of independent operators building scalable companies together while staying boutique.
                             </p>
                         </FadeIn>
                     </div>
@@ -30,9 +31,9 @@ export function SectionWhatAreWe() {
                                         <Users size={28} strokeWidth={1} />
                                     </div>
                                     <div>
-                                        <h3 className="text-2xl md:text-4xl font-bold mb-6 leading-tight">Private Network</h3>
+                                        <h3 className="text-2xl md:text-4xl font-bold mb-6 leading-tight">Private Operator Network</h3>
                                         <p className="text-lg text-muted-foreground font-light leading-relaxed group-hover:text-black transition-colors max-w-lg">
-                                            Connect with vetted operators who are scaling real businesses. No gurus, just operators.
+                                            Vetted vacation rental CEOs actively running and scaling portfolios. No vendors. No pitching. Just managers aligned around execution.
                                         </p>
                                     </div>
                                 </div>
@@ -47,9 +48,9 @@ export function SectionWhatAreWe() {
                                             <BarChart3 size={20} strokeWidth={1} />
                                         </div>
                                         <div>
-                                            <h3 className="text-xl font-bold mb-4">Proprietary Data</h3>
+                                            <h3 className="text-xl font-bold mb-4">Shared Benchmarks</h3>
                                             <p className="text-sm text-muted-foreground font-light leading-relaxed group-hover:text-black transition-colors">
-                                                Benchmark your performance against the top 1% of the industry.
+                                                Compare revenue, margins, payroll, and OPEX against operators at your stage. Identify where you are leaking profit and where to push growth.
                                             </p>
                                         </div>
                                     </div>
@@ -62,9 +63,9 @@ export function SectionWhatAreWe() {
                                             <Scale size={20} strokeWidth={1} />
                                         </div>
                                         <div>
-                                            <h3 className="text-xl font-bold mb-4">Purchase Power</h3>
+                                            <h3 className="text-xl font-bold mb-4">Collective Buying Power</h3>
                                             <p className="text-sm text-muted-foreground font-light leading-relaxed group-hover:text-black transition-colors">
-                                                Leverage our collective size to negotiate enterprise-level deals.
+                                                Pool unit count to secure enterprise pricing on key software and vendors. Reduce operating expenses without giving up independence.
                                             </p>
                                         </div>
                                     </div>

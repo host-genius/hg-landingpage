@@ -6,28 +6,61 @@ export function SectionHowItWorks() {
     const steps = [
         {
             id: "01",
-            title: "Meet with VP of Ops & RevMan",
-            description: "Roadmap a proven process to hit your goals faster. We audit where you are and map out exactly how to get to where you want to go."
+            title: "Get Full Visibility",
+            description: (
+                <div className="space-y-4">
+                    <p>Connect your PMS and financials. Track the 15 metrics that drive growth.</p>
+                    <ul className="list-disc pl-5 space-y-2 text-white/80">
+                        <li>Owner leads</li>
+                        <li>Conversion rate</li>
+                        <li>Retention</li>
+                        <li>Revenue per unit</li>
+                        <li>Margin</li>
+                    </ul>
+                    <p className="font-medium text-white">See exactly where you stand.</p>
+                </div>
+            )
         },
         {
             id: "02",
-            title: "Get into Slack",
-            description: "Join the conversation in channels focused on Homeowner Acquisitions, Portfolio Acquisitions, Cleaning Ops, Accounting, and more."
+            title: "Plug Into the Private Network",
+            description: (
+                <div className="space-y-4">
+                    <p>Join focused Slack channels across:</p>
+                    <ul className="list-disc pl-5 space-y-2 text-white/80">
+                        <li>Homeowner acquisition</li>
+                        <li>Revenue management</li>
+                        <li>Operations</li>
+                        <li>Hiring</li>
+                        <li>Finance</li>
+                    </ul>
+                    <p className="font-medium text-white">You see who is leading each metric. You know exactly who to reach out to.</p>
+                </div>
+            )
         },
         {
             id: "03",
-            title: "Connect CEO Dashboard",
-            description: "Hook up your PMS. See all metrics, leading indicators, and KPIs. Visualize the community leaderboards."
+            title: "Get your own team of VP who have already walked the path",
+            description: (
+                <div className="space-y-4">
+                    <p>They review your numbers and push you toward clear targets.</p>
+                    <ul className="list-disc pl-5 space-y-2 text-white/80">
+                        <li>VP of Revenue</li>
+                        <li>VP of Operations</li>
+                        <li>VP of Homeowner Growth</li>
+                    </ul>
+                    <p className="font-medium text-white">You stay in control. You move faster.</p>
+                </div>
+            )
         },
         {
             id: "04",
-            title: "Start Executing",
-            description: "See who is ranked #1 in specific metrics so you know exactly who to reach out to for advice."
-        },
-        {
-            id: "05",
-            title: "Accountability",
-            description: "Our team has full visibility to ensure you are on track. We don't let you fail."
+            title: "Collective Leverage to keep profits up as you scale",
+            description: (
+                <div className="space-y-4">
+                    <p>Enterprise pricing on key software and vendors. Lower OPEX while scaling.</p>
+                </div>
+            )
         }
     ];
 
@@ -37,9 +70,12 @@ export function SectionHowItWorks() {
                 <FadeIn>
                     <div className="mb-24">
                         <span className="text-blue-400 font-mono text-sm tracking-widest uppercase mb-6 block">The Process</span>
-                        <h2 className="text-6xl md:text-8xl font-bold text-white mb-8 leading-[0.85] tracking-tighter">
-                            How it works.
+                        <h2 className="text-5xl md:text-7xl font-bold text-white mb-8 leading-[0.9] tracking-tighter max-w-4xl">
+                            How This Actually Works By Stopping Building Alone
                         </h2>
+                        <p className="text-xl md:text-2xl text-muted-foreground font-light max-w-2xl">
+                            You can keep trying to figure it out yourself, or you can leverage a network of peers.
+                        </p>
                     </div>
                 </FadeIn>
 
@@ -57,9 +93,9 @@ export function SectionHowItWorks() {
                                         </h3>
                                     </div>
                                     <div className="md:w-1/2">
-                                        <p className="text-muted-foreground leading-relaxed font-light text-lg group-hover:text-white transition-colors">
+                                        <div className="text-muted-foreground leading-relaxed font-light text-lg group-hover:text-white transition-colors">
                                             {step.description}
-                                        </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

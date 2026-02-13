@@ -34,17 +34,22 @@ export function Hero() {
                             {/* Split Content at Bottom of Hero */}
                             <div className="flex flex-col md:flex-row gap-8 md:justify-between w-full border-t border-white/10 pt-8">
                                 <p className="text-lg md:text-xl text-muted-foreground max-w-md font-light leading-relaxed">
-                                    A private network, CEO dashboard, and homeowner CRM. Run your business like a tech startup.
+                                    A private network for independent vacation rental operators who want to grow without joining a franchise.
                                 </p>
 
-                                <div className="flex items-center gap-6">
-                                    <button
-                                        onClick={() => setIsModalOpen(true)}
-                                        className="group h-16 px-10 bg-white text-black font-bold text-lg rounded-full hover:bg-zinc-200 transition-colors flex items-center gap-4"
-                                    >
-                                        Apply Now
-                                        <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                                    </button>
+                                <div className="flex items-start gap-6">
+                                    <div className="flex flex-col items-center gap-3">
+                                        <button
+                                            onClick={() => setIsModalOpen(true)}
+                                            className="group h-16 px-10 bg-white text-black font-bold text-lg rounded-full hover:bg-zinc-200 transition-colors flex items-center gap-4"
+                                        >
+                                            Apply Now
+                                            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                                        </button>
+                                        <p className="text-xs text-muted-foreground/80 font-light text-center max-w-[280px]">
+                                            Monthly membership. 60-day break-even guarantee. Application required.
+                                        </p>
+                                    </div>
 
                                     <button
                                         onClick={() => setIsVideoOpen(true)}

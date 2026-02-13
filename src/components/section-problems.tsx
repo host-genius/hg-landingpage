@@ -7,42 +7,46 @@ export function SectionProblems() {
     const problems = [
         {
             id: "01",
-            title: "Slow, inconsistent owner growth",
-            description: "Growth based on luck is hard to predict, hard to sell, and impossible to step away from."
+            title: "Owner Growth Is Slow and Inconsistent",
+            description: "New doors come from referrals and luck. No predictable acquisition engine. Hard to step away. Hard to sell."
         },
         {
             id: "02",
-            title: "Stuck in the business",
-            description: "Transitioning from Property Manager to CEO is painful. You can't ask your parents or friends how to scale a tech-enabled STR company."
+            title: "You Are Stuck Between PM and CEO",
+            description: "You manage cleaners. You handle guest issues. You answer owner calls."
         },
         {
             id: "03",
-            title: "So many roles, so little time",
-            description: "You're wearing too many hats. Operations, Revenue Management, Marketing, HR, Accounting..."
+            title: "No One to Talk to on How to Build the Company",
+            description: "You cannot ask your parents or friends how to scale a short-term rental portfolio. The key to growth is to surround yourself with equals who have walked the path before you."
         },
         {
             id: "04",
-            title: "Need to be the small fish",
-            description: "To grow, you need to hire people smarter than you and be in a room where you're surrounded by larger, successful operators."
+            title: "Too Many Roles. Not Enough Depth",
+            description: "Revenue management. Hiring. Operations & AI. Accounting. Homeowner Acquisition. You need people smarter than you in each area. But hiring that level of talent alone is expensive and risky at your size."
+        },
+        {
+            id: "05",
+            title: "The Tradeoff We No Longer Agree to",
+            description: "You started this business for freedom and ownership. As it grows, you become more essential to it. Growth without structure increases responsibility, not leverage."
         }
     ];
 
     return (
-        <section className="py-32 px-4 relative overflow-hidden bg-[#050505]">
+        <section className="py-32 px-4 relative bg-[#050505]">
             <div className="max-w-[1200px] mx-auto relative z-10">
-                <div className="flex flex-col lg:flex-row gap-16 lg:gap-32">
+                <div className="flex flex-col lg:flex-row gap-16 lg:gap-32 items-start">
                     {/* Sticky Header */}
                     <div className="lg:w-1/2 lg:sticky lg:top-32 h-fit mb-12 lg:mb-0">
                         <FadeIn once={false}>
                             <span className="text-red-500 font-mono text-sm tracking-widest uppercase mb-8 block">The Reality</span>
-                            <h2 className="text-6xl md:text-[8rem] lg:text-[10rem] font-bold text-white mb-12 leading-[0.8] tracking-tighter">
-                                The <br />
-                                Struggle <br />
-                                Is <br />
-                                <span className="text-white/30">Real.</span>
+                            <h2 className="text-6xl md:text-[6rem] lg:text-[7rem] font-bold text-white mb-12 leading-[0.9] tracking-tighter">
+                                The Problems <br />
+                                We Solve <br />
+                                <span className="text-white/30">Together.</span>
                             </h2>
-                            <p className="text-xl md:text-2xl text-muted-foreground font-light max-w-md">
-                                Most VRMs hit a ceiling because the playbook that got them to 50 units won't get them to 500.
+                            <p className="text-xl md:text-2xl text-muted-foreground font-light max-w-lg">
+                                To join this network, you already have to be a strong vacation rental manager. We are here to grow faster, more profitably, and with fewer costly mistakes.
                             </p>
                         </FadeIn>
                     </div>
