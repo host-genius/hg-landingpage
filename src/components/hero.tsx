@@ -51,12 +51,7 @@ export function Hero() {
                                         </p>
                                     </div>
 
-                                    <button
-                                        onClick={() => setIsVideoOpen(true)}
-                                        className="group h-16 w-16 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/5 transition-colors"
-                                    >
-                                        <Play size={20} fill="currentColor" className="ml-1 text-white" />
-                                    </button>
+
                                 </div>
                             </div>
                         </div>
