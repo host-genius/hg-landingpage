@@ -12,7 +12,7 @@ export function SectionWhatAreWe() {
                         <FadeIn once={false}>
                             <span className="block text-accent text-sm tracking-[0.2em] uppercase mb-8 font-medium">The Mission</span>
                             <h2 className="text-6xl md:text-8xl font-bold mb-10 text-white leading-[0.85] tracking-tighter">
-                                Not a <br /> Mastermind. <br />
+                                Not a <br /> Franchise. <br />
                                 <span className="text-white/40">Not a Course.</span> <br />
                                 Not a Group Chat.
                             </h2>
