@@ -21,7 +21,7 @@ export function SectionHowWeHelp() {
                                 <span className="text-white/40">hit your goals.</span>
                             </h2>
                             <p className="text-xl md:text-2xl text-muted-foreground font-light leading-relaxed max-w-md">
-                                We don't just give you advice; we give you the data, the people, and the leverage to execute.
+                                We don&apos;t just give you advice; we give you the data, the people, and the leverage to execute.
                             </p>
                         </FadeIn>
                     </div>
@@ -89,7 +89,7 @@ export function SectionHowWeHelp() {
                                     <h3 className="text-2xl font-bold text-white">Collective Intelligence</h3>
                                 </div>
                                 <p className="text-lg text-muted-foreground leading-relaxed font-light">
-                                    Get insights you can't get anywhere else. See who is #1 for each metric and reach out to them directly for advice.
+                                    Get insights you can&apos;t get anywhere else. See who is #1 for each metric and reach out to them directly for advice.
                                 </p>
                             </FadeIn>
                         </div>

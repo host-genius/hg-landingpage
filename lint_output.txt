@@ -1,0 +1,96 @@
+
+/Users/cole/Desktop/Notion Landing Page /src/app/admin/page.tsx
+   5:10  warning  'FadeIn' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      @typescript-eslint/no-unused-vars
+  18:13  error    Error: Cannot access variable before it is declared
+
+`loadSubmissions` is accessed before it is declared, which prevents the earlier access from updating when this value changes over time.
+
+/Users/cole/Desktop/Notion Landing Page /src/app/admin/page.tsx:18:13
+  16 |         if (auth === "true") {
+  17 |             setIsAuthenticated(true);
+> 18 |             loadSubmissions();
+     |             ^^^^^^^^^^^^^^^ `loadSubmissions` accessed before it is declared
+  19 |         }
+  20 |     }, []);
+  21 |
+
+/Users/cole/Desktop/Notion Landing Page /src/app/admin/page.tsx:22:5
+  20 |     }, []);
+  21 |
+> 22 |     const loadSubmissions = () => {
+     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 23 |         setSubmissions(getSubmissions());
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 24 |     };
+     | ^^^^^^^ `loadSubmissions` is declared here
+  25 |
+  26 |     const handleLogin = (e: React.FormEvent) => {
+  27 |         e.preventDefault();  react-hooks/immutability
+
+/Users/cole/Desktop/Notion Landing Page /src/app/page.tsx
+   2:10  warning  'FadeIn' is defined but never used                                                                                                                                                                                                                                                       @typescript-eslint/no-unused-vars
+  33:13  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+/Users/cole/Desktop/Notion Landing Page /src/components/founder-note.tsx
+  55:33   error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  55:170  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+
+/Users/cole/Desktop/Notion Landing Page /src/components/hero.tsx
+  3:10  warning  'Play' is defined but never used  @typescript-eslint/no-unused-vars
+
+/Users/cole/Desktop/Notion Landing Page /src/components/section-how-it-works.tsx
+  3:18  warning  'SlideIn' is defined but never used  @typescript-eslint/no-unused-vars
+
+/Users/cole/Desktop/Notion Landing Page /src/components/section-how-we-help.tsx
+   5:34  warning  'UserCog' is defined but never used                                                                                                                                                                                                                                                      @typescript-eslint/no-unused-vars
+   5:43  warning  'TrendingUp' is defined but never used                                                                                                                                                                                                                                                   @typescript-eslint/no-unused-vars
+  24:39  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`                                                                                                                                                                                                                          react/no-unescaped-entities
+  38:37  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+  71:37  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+  92:57  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`                                                                                                                                                                                                                          react/no-unescaped-entities
+
+/Users/cole/Desktop/Notion Landing Page /src/components/section-movement.tsx
+   51:13  error  'start' is never reassigned. Use 'const' instead                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 prefer-const
+  147:25  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  react/no-unescaped-entities
+  147:38  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  react/no-unescaped-entities
+  216:33  error  Error: Cannot reassign variable after render completes
+
+Reassigning `cumulative` after render has completed can cause inconsistent behavior on subsequent renders. Consider using state instead.
+
+/Users/cole/Desktop/Notion Landing Page /src/components/section-movement.tsx:216:33
+  214 |                                 const strokeDash = (seg.pct / 100) * circumference;
+  215 |                                 const offset = (cumulative / 100) * circumference;
+> 216 |                                 cumulative += seg.pct;
+      |                                 ^^^^^^^^^^ Cannot reassign `cumulative` after render completes
+  217 |
+  218 |                                 return (
+  219 |                                     <circle  react-hooks/immutability
+
+/Users/cole/Desktop/Notion Landing Page /src/components/section-problems.tsx
+  4:10  warning  'TrendingDown' is defined but never used  @typescript-eslint/no-unused-vars
+  4:24  warning  'Anchor' is defined but never used        @typescript-eslint/no-unused-vars
+  4:32  warning  'Shuffle' is defined but never used       @typescript-eslint/no-unused-vars
+  4:41  warning  'Target' is defined but never used        @typescript-eslint/no-unused-vars
+
+/Users/cole/Desktop/Notion Landing Page /src/components/section-team.tsx
+   4:10   warning  'ArrowRight' is defined but never used                                                                                                                                                                                                                                                   @typescript-eslint/no-unused-vars
+  20:35   error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`                                                                                                                                                                                                                          react/no-unescaped-entities
+  20:167  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`                                                                                                                                                                                                                          react/no-unescaped-entities
+  33:41   warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+  37:41   warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+  42:41   warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+  45:41   warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+/Users/cole/Desktop/Notion Landing Page /src/components/section-what-are-we.tsx
+  4:10  warning  'ArrowRight' is defined but never used  @typescript-eslint/no-unused-vars
+
+/Users/cole/Desktop/Notion Landing Page /src/components/submission-modal.tsx
+  104:101  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+/Users/cole/Desktop/Notion Landing Page /src/components/testimonials-carousel.tsx
+    6:18  warning  'AnimatePresence' is defined but never used  @typescript-eslint/no-unused-vars
+  161:55  error    Unexpected any. Specify a different type     @typescript-eslint/no-explicit-any
+
+✖ 33 problems (13 errors, 20 warnings)
+  1 error and 0 warnings potentially fixable with the `--fix` option.
+

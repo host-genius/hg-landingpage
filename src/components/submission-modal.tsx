@@ -101,7 +101,7 @@ export function SubmissionModal({ isOpen, onClose }: SubmissionModalProps) {
                                     </svg>
                                 </div>
                                 <h3 className="text-2xl font-bold mb-2">Application Received!</h3>
-                                <p className="text-muted-foreground">Thanks {formData.firstName}. We'll be in touch shortly.</p>
+                                <p className="text-muted-foreground">Thanks {formData.firstName}. We&apos;ll be in touch shortly.</p>
                             </div>
                         ) : (
                             <div className="flex flex-col h-full overflow-y-auto">

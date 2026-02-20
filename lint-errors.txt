@@ -1,0 +1,30 @@
+
+/Users/cole/Desktop/Notion Landing Page /src/app/admin/page.tsx
+  18:13  error  Error: Cannot access variable before it is declared
+
+`loadSubmissions` is accessed before it is declared, which prevents the earlier access from updating when this value changes over time.
+
+/Users/cole/Desktop/Notion Landing Page /src/app/admin/page.tsx:18:13
+  16 |         if (auth === "true") {
+  17 |             setIsAuthenticated(true);
+> 18 |             loadSubmissions();
+     |             ^^^^^^^^^^^^^^^ `loadSubmissions` accessed before it is declared
+  19 |         }
+  20 |     }, []);
+  21 |
+
+/Users/cole/Desktop/Notion Landing Page /src/app/admin/page.tsx:22:5
+  20 |     }, []);
+  21 |
+> 22 |     function loadSubmissions() {
+     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 23 |         setSubmissions(getSubmissions());
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 24 |     }
+     | ^^^^^^ `loadSubmissions` is declared here
+  25 |
+  26 |     const handleLogin = (e: React.FormEvent) => {
+  27 |         e.preventDefault();  react-hooks/immutability
+
+✖ 1 problem (1 error, 0 warnings)
+

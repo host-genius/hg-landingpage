@@ -3,7 +3,7 @@
 import { useState, useRef } from "react";
 import { cn } from "@/lib/utils";
 import { ChevronLeft, ChevronRight, Play } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 interface TestimonialsCarouselProps {
     className?: string;
@@ -158,6 +158,7 @@ export function TestimonialsCarousel({ className }: TestimonialsCarouselProps) {
                                 key={testimonial.id}
                                 initial={false}
                                 animate={getCardPosition(index, activeIndex)}
+                                // eslint-disable-next-line @typescript-eslint/no-explicit-any
                                 variants={variants as any}
                                 className="absolute w-[95%] md:w-[85%] h-full shadow-2xl rounded-xl overflow-hidden cursor-pointer"
                                 onClick={() => {

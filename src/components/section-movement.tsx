@@ -48,7 +48,7 @@ function useCountUp(target: number, duration: number = 2000, startOnView: boolea
     useEffect(() => {
         if (!startOnView || !isInView) return;
 
-        let start = 0;
+        const start = 0;
         const end = target;
         const startTime = performance.now();
 
@@ -144,7 +144,7 @@ function CurrentRealityCard() {
 
             <div className="mt-6 pt-6 border-t border-white/5">
                 <p className="text-sm text-white/40 italic">
-                    The "Emerging Pro" phase is where operational complexity spikes and standard systems break.
+                    The &quot;Emerging Pro&quot; phase is where operational complexity spikes and standard systems break.
                 </p>
             </div>
         </div>
@@ -208,12 +208,11 @@ function MarketRadarCard() {
                 <div className="relative w-56 h-56 flex-shrink-0">
                     <svg viewBox="0 0 100 100" className="w-full h-full -rotate-90">
                         {(() => {
-                            let cumulative = 0;
                             return MARKET_SEGMENTS.map((seg, i) => {
                                 const circumference = 2 * Math.PI * 38;
                                 const strokeDash = (seg.pct / 100) * circumference;
+                                const cumulative = MARKET_SEGMENTS.slice(0, i).reduce((sum, s) => sum + s.pct, 0);
                                 const offset = (cumulative / 100) * circumference;
-                                cumulative += seg.pct;
 
                                 return (
                                     <circle

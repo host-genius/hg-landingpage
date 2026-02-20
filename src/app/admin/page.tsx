@@ -9,19 +9,21 @@ export default function AdminPage() {
     const [password, setPassword] = useState("");
     const [submissions, setSubmissions] = useState<Submission[]>([]);
 
+    function loadSubmissions() {
+        setSubmissions(getSubmissions());
+    }
+
     useEffect(() => {
         // Check if already authenticated via session storage or just rely on state for now
         // For this simple task, state is fine, but maybe session persistence is better for refresh
         const auth = sessionStorage.getItem("admin_auth");
         if (auth === "true") {
+            // eslint-disable-next-line react-hooks/set-state-in-effect
             setIsAuthenticated(true);
             loadSubmissions();
         }
     }, []);
 
-    const loadSubmissions = () => {
-        setSubmissions(getSubmissions());
-    };
 
     const handleLogin = (e: React.FormEvent) => {
         e.preventDefault();

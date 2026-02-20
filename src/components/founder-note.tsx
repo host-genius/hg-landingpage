@@ -52,7 +52,7 @@ export function FounderNote() {
                             </div>
 
                             <div className="mt-8 italic text-white/50 text-sm md:text-base border-l-2 border-accent/30 pl-4 py-1">
-                                "I earn $6M a year across 3 companies and I’m not even 30 yet. This is not a get rich scheme. But nothing is more important than network."
+                                &quot;I earn $6M a year across 3 companies and I’m not even 30 yet. This is not a get rich scheme. But nothing is more important than network.&quot;
                             </div>
                         </div>
                     </div>

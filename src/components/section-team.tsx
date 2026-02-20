@@ -17,7 +17,7 @@ export function SectionTeam() {
                                 <span className="text-white/30 italic font-serif">Are.</span>
                             </h2>
                             <p className="text-xl text-muted-foreground leading-relaxed font-light mb-12 max-w-lg">
-                                We're a group of vacation rental managers that are looking to build and scale our companies to provide long-term wealth. And we couldn't do it without the collective intelligence we have by coming together.
+                                We&apos;re a group of vacation rental managers that are looking to build and scale our companies to provide long-term wealth. And we couldn&apos;t do it without the collective intelligence we have by coming together.
                             </p>
 
 
